@@ -69,6 +69,7 @@ export const App: React.FC = () => {
       setTodoList(prev => prev.filter(todo => todo.id !== todoId));
     } catch (err) {
       setError(ErrorStatus.UnableToDelete);
+      throw err;
     } finally {
       setLoadingTodoIds(prev => prev.filter(id => id !== todoId));
     }

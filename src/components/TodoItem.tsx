@@ -64,8 +64,6 @@ export const TodoItem: React.FC<Props> = props => {
     } catch (error) {
       inputRef?.current?.focus();
     }
-
-    setTitleValue(todo.title);
   };
 
   const onKeyUp = (event: React.KeyboardEvent<HTMLInputElement>) => {
